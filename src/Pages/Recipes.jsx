@@ -5,7 +5,7 @@ import { IoEye } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
 import { MdOutlineDownloadDone } from "react-icons/md";
 
-const Rescipes = () => {
+const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
@@ -16,6 +16,18 @@ const Rescipes = () => {
       });
   }, []); // Empty dependency array to run effect only once
 
+  const handleRecipeClick = (id) => {
+    const clickedRecipe = recipes[id];
+    console.log("Clicked Recipe Info:");
+    console.log("Name:", clickedRecipe.name);
+    console.log("Calories per Serving:", clickedRecipe.caloriesPerServing);
+    console.log("Cooking Time:", clickedRecipe.cookTimeMinutes);
+    console.log("Rating:", clickedRecipe.rating);
+    console.log("Viewed:", clickedRecipe.reviewCount);
+    console.log("Servings:", clickedRecipe.servings);
+    // Add more fields as needed
+  };
+
   return (
     <>
       <div className="flex flex-wrap w-[90%] mx-auto justify-around gap-[30px]">
@@ -23,6 +35,7 @@ const Rescipes = () => {
           <div
             key={id}
             className="flex bg-slate-800 w-[300px] h-[540px] flex-col rounded-xl pb-3 shadow-xl shadow-slate-500 text-white "
+            onClick={() => handleRecipeClick(id)}
           >
             <img
               src={recipe.image}
@@ -59,4 +72,5 @@ const Rescipes = () => {
   );
 };
 
-export default Rescipes;
+export default Recipes;
+  

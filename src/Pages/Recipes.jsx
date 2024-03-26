@@ -14,7 +14,8 @@ const Recipes = () => {
       .then((data) => {
         setRecipes(data.recipes);
       });
-  }, []); // Empty dependency array to run effect only once
+  }, []); 
+  
 
   const handleRecipeClick = (id) => {
     const clickedRecipe = recipes[id];
@@ -25,7 +26,6 @@ const Recipes = () => {
     console.log("Rating:", clickedRecipe.rating);
     console.log("Viewed:", clickedRecipe.reviewCount);
     console.log("Servings:", clickedRecipe.servings);
-    // Add more fields as needed
   };
 
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Correct import
 import Navbar from './components/Navbar';
 import Products from './Pages/Products';
 import Recipes from './Pages/Recipes';
@@ -7,7 +7,7 @@ import Comments from './Pages/Comments';
 import Users from './Pages/Users';
 import Dashboard from './Pages/Dashboard';
 
-function App() {
+const App = () => {
   return (
     <Router>
       <div>

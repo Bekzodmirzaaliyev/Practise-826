@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Correct import
 import Navbar from './components/Navbar';
 import Products from './Pages/Products';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { useState } from 'react'
 import Recipes from './Pages/Recipes';
 import Comments from './Pages/Comments';

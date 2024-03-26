@@ -1,9 +1,9 @@
 import React from 'react'
 
 const Users = () => {
-  return (
+  return(
     <div>Users</div>
   )
-}
+};
 
 export default Users
